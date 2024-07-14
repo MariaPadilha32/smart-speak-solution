@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 left">
+                <div class="row">
+                {% for post in post_list %}
+                <div class="col-6 col-sm-4">
+                    <br>
+                    <div class="card mb-4 border" style="width: 22rem;">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <!-- The featured image/ Placeholder post images -->
+                                
+                                
+                                <div class="image-flash">
+                                    <p class="author text-muted">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                                <h3 class="card-title">{{ post.title }}</h3>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            
+                            <br>
+                            <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">See Article</a>
+                            
+                            {% if user.is_superuser %}
+                            <hr>
+                            <div>
+                                <small>
+                                    <a class="link" href="{% url 'update_post' post.slug %}">(Edit Post)</a>
+        
+                                    <a class="link" href="{% url 'delete_post' post.slug %}">(Delete Post) </a>
+                                </small>
+                            </div>
+                            {% endif %}
+                            
+                            <hr>
+                            <!-- Post created date -->
+                            <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+        </div>    
+                {% endif %}
+                {% endfor %}
+               
+    </div>
+</div>
+
+{%endblock%}

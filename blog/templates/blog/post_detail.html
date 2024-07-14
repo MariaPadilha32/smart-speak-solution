@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+
+<div class="masthead">
+    <ul>
+        {% if user.is_superuser %}
+        <div class="container">
+            <small class="ml-2">
+                <a class="btn btn-warning mt-2" href="{% url 'update_post' post.slug %}">Edit Post</a> | 
+                <a class="btn btn-danger mt-2" href="{% url 'delete_post' post.slug %}">Delete Post</a>
+            </small>
+        </div>
+        <hr>
+        {% endif %}
+    </ul>
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-12 masthead-text">
+                <!-- Post title -->
+                <h1 class="post-title">{{ post.title }}</h1>
+                <!-- Post author and created date -->
+                <p class="post-subtitle">Admin | {{ post.created_on }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                <img src=" {{ post.image.url }}" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+          
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+            
+                <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
+                <div class="row">
+
+                    <div class="col-1">
+                       
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

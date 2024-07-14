@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="container h-100 bg-error m-6 rounded-4">
+        <div class="row h-100">
+            <div class="col col-lg-6 col-md-8 col-sm-12 m-auto text-center text-gold p-3">
+                <hr>
+                <h3 class="logo-font text-blue">Smart<strong>Speak</strong>Solutions</h3>
+                <h4 class="text-blue">Internal Server Error</h4>
+                <hr>
+                <div class="my-5">
+                    <h3 class="pt-3">
+                        <a class="btn btn-aa mx-auto" 
+                        href="{% url 'home' %}" role="button">Home <i class="fa-solid fa-arrow-rotate-left"></i></a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

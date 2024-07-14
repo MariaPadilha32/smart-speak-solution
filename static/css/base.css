@@ -1,0 +1,514 @@
+:root{
+    --color-gold: #FFD700;
+    --color-orange: orange;
+    --color-bg-head: #060644;
+    --color-bg-head-light: #191981;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('../../media/speechfather.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90dvh;
+    color: #555;
+    font-family: 'Lato';
+}
+
+.layout-login{
+    background-color: var(--color-bg-head);
+    margin-top: 150px;
+}
+
+.detail{
+    background-color: white; 
+}
+
+.content-bag{
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-detail{
+    margin: 100px 0px 0px 0px;
+}
+
+.bg-none {
+    background-color: none;
+}
+
+.navy-bg {
+    background-color: #060644;
+    display:flex;
+    width: 100vw;
+  }
+  
+.nav-link {
+    color: gold !important;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--color-gold);
+}
+
+.background-bg-head {
+    background-color:var(--color-bg-head);
+}
+
+.background-bg-head-btn {
+    background-color:var(--color-bg-head);
+}
+
+.background-bg-head-btn:hover {
+    background-color: var(--color-bg-head-light);
+ }
+
+ .item-dropdown {
+    width: 219px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .dropdown-item {
+    color: var(--color-gold);
+    background-color: var(--color-bg-head);
+ }
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.text-gold {
+    color: var(--color-gold)  !important;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-gold {
+    background: var(--color-orange);
+    color: white;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.btn-contact {
+    background-color: var(--color-bg-head);
+    border-radius: 15px;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.border-gray {
+    border: 1px solid gray !important;
+}
+
+.text-blue {
+    color: var(--color-bg-head-light);
+}
+
+footer {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color-bg-head);
+    color: var(--color-gold);
+    display:  flex;
+    justify-content: center;
+}
+
+.socials {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-icon{
+    fill: var(--color-gold);
+}
+
+.text-area{
+    resize: none;
+}
+
+.bi{
+    width: 20px;
+    height: 20px;
+}
+
+.bg-error {
+    background-color: #fff;
+  }
+
+.logo-icon{
+    width: 50px;
+}
+
+.description {
+    max-width: none;
+}
+
+.title-description {
+    max-width: none;
+}
+
+.value-title-description {
+    max-width: none;
+}
+
+.image-description {
+    max-width: none;
+}
+
+.picture-description{
+    max-width: none;
+}
+
+.controls-description {
+    max-width: none;
+}
+
+.detail-description {
+    max-width: none;
+}
+
+.value-picture-description {
+    max-width: none;
+}
+
+.pricetable{
+    max-width: none;
+}
+
+.value-detail-description {
+    max-width: none;
+}
+
+.btn-buy {
+    max-width: none;
+}
+
+.btn-cancel {
+    max-width: none;
+}
+
+.form-description {
+    max-width: none;
+}
+
+.form-buy {
+    max-width: none;
+}
+
+.ln-form-description {
+    max-width: none;
+}
+
+.field-description-form-buy {
+    max-width: none;
+}
+
+.lb-form-buy {
+    max-width: none;
+}
+
+.field-input-form-buy {
+    max-width: none;
+}
+
+.input-form-buy {
+    max-width: none;
+}
+
+.ln-form-description {
+    max-width: none;
+}
+
+.option-form-buy{
+    max-width: none;
+}
+
+.checkbox-form-buy{
+    max-width: none;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+  /* Allauth form formatting */
+
+  .allauth-form-style {
+    margin-top: 250px;
+    background-color: #EEE;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #555;
+    opacity: 0.85;
+}
+  
+  .allauth-form-inner-content p {
+      margin-top: 1.5rem; /* mt-4 */
+      color: #000000; /* text-secondary */
+  }
+  
+  .allauth-form-inner-content input {
+      border-color: #000;
+      border-radius: 0;
+  }
+  
+  .allauth-form-inner-content label:not([for='id_remember']) {
+      display: none;
+  }
+  
+  .allauth-form-inner-content input::placeholder {
+      color: #aab7c4;
+  }
+  
+  .allauth-form-inner-content button,
+  .allauth-form-inner-content input[type='submit'] {
+      /* btn */
+      display: inline-block;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: #000;
+      border: 1px solid #000;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0;
+  
+      /* standard bootstrap btn transitions */
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  
+  .allauth-form-inner-content button:hover,
+  .allauth-form-inner-content input[type='submit']:hover {	
+      color: #fff;
+      background-color: #222;
+      border-color: #222;
+  }
+  
+  .allauth-form-inner-content a {
+      color: #0547ff; /* text-info */
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 50px;
+      }
+  }
+  
+   /* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+}
+
+  

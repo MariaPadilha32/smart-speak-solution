@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    
+    <section class="section-margin-bottom">
+        <div class="container mt-1 text-center">
+            <div class="col-12 mb-2">
+                <h2 class="text-black">
+                    <strong>Contact Us</strong>
+                </h2>
+            </div>  
+        </div>
+        
+        <div class="row mb-5">
+            <div class="container col-sm-4 mb-5">
+            <div class="row justify-content-center ">
+
+                <div class="card m-2 text-center" style="max-width: 25rem; max-height: 15rem;">
+                    <div class="card-header"><i class="fa-solid fa-envelope fa-2xl"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">General enquiries</h5>
+                      <p class="card-text">Have a question about our products?.</p>
+                      </div>
+                      <a href="{% url 'contact general' %}" class="btn btn-black rounded-0 text-uppercase">Contact us</a>
+                  </div>
+            </div>
+            </div>
+
+            
+            <div class="container col-sm-4 mb-5">
+            <div class="row justify-content-center ">
+
+                <div class="card m-2 text-center" style="max-width: 25rem; max-height: 15rem;">
+                    <div class="card-header"><i class="fa-brands fa-rocketchat fa-2xl"></i></div>
+                    <div class="card-body text-dark">
+                      <h5 class="card-title">Support</h5>
+                      <p class="card-text">Need support on an order? Please contact a member of our team here.</p>
+                      </div>
+                      <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-uppercase">Support Email</a>
+                  </div>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="faq">
+        
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3><span><strong>Frequently</strong> </span><strong>Asked Questions</strong> </h3><br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    <strong> What types of speeches do you write?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>We specialize in writing a variety of speeches including eulogies, wedding vows,
+                                        bride's or groom's speeches, father or mother of the bride or groom speech, maid of honour,
+                                        best-man, anniversaries, milestones, corporate speeches, graduation speeches, and more.
+                                        Whether it's a personal or professional event, we can craft the perfect speech to meet your needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <strong>How long does it take to receive my speech?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> For eulogies, we understand the urgency and guarantee delivery within 24 hours. For all other 
+                                        types of speeches, our standard delivery time is 5 working days from the date of your order.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> How do I receive my completed speech?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Your completed speech will be delivered to the email address you provide on the order form. 
+                                        Please ensure the email address is correct to avoid any delays.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> Can I request revisions to my speech?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Yes, we offer revision meetings to ensure your speech meets your expectations. 
+                                        For eulogies, you are entitled to one revision meeting. For all other speeches, 
+                                        you can have up to two revision meetings if necessary.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> How do the revision meetings work?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>After you receive your draft speech, you can schedule a meeting to discuss any changes or amendments. 
+                                        For eulogies, you can schedule one meeting. For other types of speeches, you can schedule up to 
+                                        two meetings. These meetings can be conducted via phone, video call, or email, depending on your preference.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong>What if I need my speech sooner than the standard delivery time?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>If you require an expedited service for non-eulogy speeches, please contact us directly to discuss 
+                                        your needs. We will do our best to accommodate your request, though additional fees may apply.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong>How do I place an order?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>You can place an order through our website by filling out the order form. Provide as much detail
+                                         as possible about the event, audience, and any specific points you want included in your speech.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> What information do you need from me to write the speech?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>We require details about the event, the audience, and any specific messages or themes you want 
+                                        included. For personalized speeches, providing anecdotes, personal stories, and key points can 
+                                        help us craft a more tailored and impactful speech.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong>How can I ensure my speech will be unique?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> All our speeches are written from scratch, tailored specifically to your needs and the event. 
+                                        We do not use templates or pre-written speeches, ensuring a unique and personalized speech every time.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong>What if I am not satisfied with the final speech?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>  Customer satisfaction is our top priority. If you are not satisfied with the final speech, 
+                                        please let us know during your revision meeting(s) so we can make the necessary changes. Our goal 
+                                        is to ensure you are completely happy with your speech.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong>How do I pay for the service?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> Payment can be made securely through our website using a credit card or debit card. Payment is
+                                         required at the time of placing your order.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> Do you offer any other services?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> In addition to speech writing, we also offer consultation services to help you prepare for 
+                                        delivering your speech, including tips on public speaking and presentation skills. Please 
+                                        contact us for more information.</p>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <strong> Is my information kept confidential?</strong>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p> Yes, we take your privacy seriously. All information you provide is kept confidential and 
+                                        used solely for the purpose of writing your speech. We do not share your information with 
+                                        third parties.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
