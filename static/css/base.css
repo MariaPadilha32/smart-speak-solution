@@ -362,6 +362,14 @@ footer {
     overflow-y: auto;
 }
 
+.newsletter-subscribe {
+    color: var(--color-gold);
+    background-color: var(--color-bg-head);
+    opacity: 0.8;
+    padding: 55px 74px;
+    margin-bottom: 200px;
+  }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

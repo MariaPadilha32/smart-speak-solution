@@ -93,7 +93,7 @@
                     </form>
                 </div>
             </div>
-            <div class="description">
+            <div class="description">                
                 <section id="product-tabs">
                     <div class="container my-5">
                         <div class="row d-flex justify-content-center">
@@ -101,28 +101,41 @@
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item custom-tab">
                                     <a class="nav-link text-black active" data-bs-toggle="tab" data-bs-target="#description">Description</a>
-                                    </li>           
-                                    <li class="nav-item custom-tab">
-                                     <a class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#questions">Questions?</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
                                     <div id="description" class="tab-pane fade show active">
                                         <h5 class="my-2">Description:</h5>
                                         <div class="container"></div>
-                                        <p class="mt-3">{{ product.description }}</p>
-                                    </div>
-                                    <div id="questions" class="tab-pane fade show ">
-                                    <h5 class="my-2">Have a question?</h5>
+                                        <p class="mt-3" >{{ product.description }}</p>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="product-tabs">
+                    <div class="container my-5">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 col-md-10 nav-border">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item custom-tab">
+                                     <a class="nav-link text-black active" data-bs-toggle="tab" data-bs-target="#questions"><strong>IMPORTANT</strong> information:</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="questions" class="tab-pane fade show active">
                                     <div class="container">
-                                        <p class="value-detail-description"><strong>Delivery time:</strong> For eulogies, delivery is within 24 hours. Any other service might take up to 5 working days.
+                                        <p class="value-detail-description">
+                                            <strong>Once payment is completed, </strong>one of our writers will contact you through the phone or email 
+                                            provided at checkout to gather key information and tailor your speech specifically to your occasion.
+                                            <br>
+                                            <strong>Delivery time:</strong> For eulogies, delivery is within 24 hours. Any other service might take up to 5 working days.
                                             <br>
                                             <strong>Reviews:</strong> For eulogies, you will have the chance for 1 review. For any other service, you can have up to 2 reviews if necessary.
                                             <br>
                                             <strong>Length of speech:</strong> For wedding vows, up to 3 minutes. For all other services, between 8 and 12 minutes. 
                                             The more information and details you provide, the more unique and intimate your speech will be.
-                                            <br>
-                                            <strong>If the form is submitted blank:</strong> One of our writers will contact you by email or telephone to get complementary information.
                                             <br>
                                         </p>
                                     </div>
@@ -133,7 +146,7 @@
                         </div>
                     </div>
                 </section>
-                <section>
+               <!-- <section>
                     <div class="form-description col-12 col-md-10 mb-5">
                         <form  method="post" class="container col-6 border">
                             {% csrf_token %}
@@ -253,11 +266,10 @@
                             </div>
                         </form>
                     </div>
-                </section>
+                </section> -->
             </div>
         </div>
     </div>
-<br>
 {% endblock %}
 
 {% block postloadjs %}
