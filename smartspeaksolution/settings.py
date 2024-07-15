@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com', '8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com', '8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
+'https://smart-speak-solutions-d06084558783.herokuapp.com/']
 
 # Application definition
 
@@ -115,6 +116,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'https://8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com',
+    'https://8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
 ]
 
 SITE_ID = 1
