@@ -1,0 +1,4 @@
+User-agent: *
+Dissalow: /accounts/
+Disallow: /checkout/
+Sitemap: https://8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net/sitemap.xml
