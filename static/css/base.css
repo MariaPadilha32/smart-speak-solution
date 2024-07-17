@@ -294,6 +294,14 @@ footer {
     color: white !important;
 }
 
+.form-section {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
