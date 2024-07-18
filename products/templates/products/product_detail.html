@@ -51,7 +51,7 @@
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <!--<div class="col-12">
+                            <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>-->
+                            </div>
 
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
@@ -139,134 +139,13 @@
                                             <br>
                                         </p>
                                     </div>
-                                    <p class="mt-3">Send us your question:<a href="{% url 'contact general' %}">here</a></p>
+                                    <p class="mt-3">Contact us:<a href="https://wa.me/353833679626">here</a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-               <!-- <section>
-                    <div class="form-description col-12 col-md-10 mb-5">
-                        <form  method="post" class="container col-6 border">
-                            {% csrf_token %}
-                            <input type="hidden" name="page" value="eulogy">
-                            <div class="d-flex">
-                                <div class="ln-form-description col-6">
-                                    <div class="field-description-form-buy col-12">
-                                        <label for="event-date" class="lb-form-buy form-label">Event Date:</label>
-                                    </div>
-                                    <div class="field-input-form-buy col-6">
-                                        <input type="date" name="event_date" id="event-date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="ln-form-description col-6">
-                                    <div class="field-description-form-buy  col-12">
-                                        <label for="text-name" class="lb-form-buy form-label">Name:</label>
-                                    </div>
-                                    <div class="field-input-form-buy col-6">
-                                        <input type="text" name="name" id="text-name" class="form-control" required>
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div class="d-flex">
-                                <div class="ln-form-description col-12">
-                                    <div class="field-description-form-buy col-12">
-                                        <label for="text-email" class="lb-form-buy form-label ">Email Address:</label>
-                                    </div>
-                                    <div class="field-input-form-buy col-12">
-                                        <input type="email" name="email" id="text-email" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="ln-form-description col-12">
-                                    <div class="field-description-form-buy col-12">
-                                        <label for="mentions" class="lb-form-buy form-label">What would you like to say on your speech:</label>
-                                    </div>
-                                    <div class="field-input-form-buy col-12">
-                                         <textarea name="mentions" id="mentions" class="form-control text-area"
-                                         placeholder=
-                                        "The more detail the more uniquei your speeche will be.
-                                        Tell us: your relationship, special thanks, any preferences and so on. Main points you want to cover
-                                        Specific anecdotes or stories to include 
-                                        Quoter and references to include 
-                                        Any particular message or takeaway you want the audience to remember" 
-                                         cols="50" rows="8"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="ln-form-description col-12">
-                                    <div class="field-description-form-buy col-12">
-                                        <label for="dos_donts" class="lb-form-buy form-label">Do's and Don'ts</label>
-                                    </div>
-                                    <div class="field-input-form-buy col-12">
-                                        <textarea name="dos_donts" id="" class="form-control text-area" cols="50" rows="7"
-                                        placeholder=""></textarea>                                        
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div class="d-flex col-12 ">
-                                <div class="ln-form-description col-12">
-                                    <div class="field-description-form-buy col-12">
-                                        <label class="lb-form-buy">Tone of the speech:</label>
-                                    </div>
-                                    <div class="col-12 border d-flex mb-5">
-                                        <div class="d-flex col-10">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_emotional" id="tone_emotional" class="checkbox-control">
-                                                        <label for="tone_emotional" class="label-control">Emotional</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_heartfelt" value="heartfelt" id="tone_heartfelt" class="checkbox-control">
-                                                        <label for="tone_heartfelt" class="label-control">Heartfelt</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_inspirational" value="inspirational" id="tone_inspirational" class="checkbox-control">
-                                                        <label for="tone_inspirational" class="label-control">Inspirational</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_sad" value="sad" id="tone_sad" class="checkbox-control">
-                                                        <label for="tone_sad" class="label-control">Sad</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_happy" value="happy" id="tone_happy" class="checkbox-control">
-                                                        <label for="tone_happy" class="label-control">Happy</label>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_funny" value="funny" id="tone_funny" class="checkbox-control">
-                                                        <label for="tone_funny" class="label-control">Funny</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_formal" value="formal" id="tone_formal" class="checkbox-control">
-                                                        <label for="tone_formal" class="label-control">Formal</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_casual" value="casual" id="tone_casual" class="checkbox-control">
-                                                        <label for="tone_casual" class="label-control">Casual</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_motivational" value="motivational" id="tone_motivational" class="checkbox-control">
-                                                        <label for="tone_motivational" class="label-control">Motivational</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input type="checkbox" name="tone_reflective" value="reflective" id="tone_reflective" class="checkbox-control">
-                                                        <label for="tone_reflective" class="label-control">Reflective</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </section> -->
             </div>
         </div>
     </div>
