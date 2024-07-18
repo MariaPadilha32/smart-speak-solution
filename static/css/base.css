@@ -107,8 +107,8 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #191981;
+    color: #FFD700;
     min-width: 260px;
 }
 
@@ -118,8 +118,8 @@ body {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #060644;
+    color: #FFD700;
 }
 
 .shop-now-button:hover,
@@ -128,8 +128,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #191981;
+    color: #FFD700;
 }
 
 .btn-contact {
@@ -282,16 +282,16 @@ footer {
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    background: #060644;
+    color: #FFD700 !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
-    color: white !important;
+    background: #191981;
+    color: #FFD700 !important;
 }
 
 .form-section {
