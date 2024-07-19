@@ -44,7 +44,7 @@ body {
 }
 
 .bg-none {
-    background-color: none;
+    background: none;
 }
 
 .navy-bg {
@@ -197,87 +197,7 @@ footer {
     max-width: none;
 }
 
-.title-description {
-    max-width: none;
-}
-
-.value-title-description {
-    max-width: none;
-}
-
-.image-description {
-    max-width: none;
-}
-
-.picture-description{
-    max-width: none;
-}
-
-.controls-description {
-    max-width: none;
-}
-
-.detail-description {
-    max-width: none;
-}
-
-.value-picture-description {
-    max-width: none;
-}
-
-.pricetable{
-    max-width: none;
-}
-
 .value-detail-description {
-    max-width: none;
-}
-
-.btn-buy {
-    max-width: none;
-}
-
-.btn-cancel {
-    max-width: none;
-}
-
-.form-description {
-    max-width: none;
-}
-
-.form-buy {
-    max-width: none;
-}
-
-.ln-form-description {
-    max-width: none;
-}
-
-.field-description-form-buy {
-    max-width: none;
-}
-
-.lb-form-buy {
-    max-width: none;
-}
-
-.field-input-form-buy {
-    max-width: none;
-}
-
-.input-form-buy {
-    max-width: none;
-}
-
-.ln-form-description {
-    max-width: none;
-}
-
-.option-form-buy{
-    max-width: none;
-}
-
-.checkbox-form-buy{
     max-width: none;
 }
 
