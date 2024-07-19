@@ -1,7 +1,6 @@
 from django import forms
 
 
-
 class NewsletterForm(forms.Form):
     subject = forms.CharField()
     receivers = forms.CharField()

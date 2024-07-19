@@ -2,6 +2,7 @@ from django.db import models
 
 # models below
 
+
 class Contact(models.Model):
     """Model for contact form"""
     CONTACT_CHOICES = [
@@ -17,5 +18,3 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
-
-    

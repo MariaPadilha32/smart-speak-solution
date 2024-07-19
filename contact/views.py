@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .forms import ContactForm, ContactGeneralForm
 from django.contrib import messages
 
+
 def contact(request):
     """A view to return contact form and page"""
     form = ContactForm()
@@ -29,10 +30,10 @@ def contact(request):
     }
     return render(request, template, context)
 
+
 def contactgeneral(request):
     """A view to return contact form and page"""
     form = ContactGeneralForm()
-
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -51,6 +52,7 @@ def contactgeneral(request):
         'form': form
     }
     return render(request, template, context)
+
 
 def contactfaq(request):
 

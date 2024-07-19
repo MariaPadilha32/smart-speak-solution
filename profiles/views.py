@@ -11,7 +11,6 @@ from .models import UserProfile
 from .forms import UserProfileForm, UpdateIndividualForm
 
 
-
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -23,19 +22,21 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Update failed. Please ensure the form is valid.'
+            )
     else:
         form = UserProfileForm(instance=profile)
-   
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        
         'on_profile_page': True
     }
 
     return render(request, template, context)
+
 
 @login_required
 def profile_update(request):
@@ -47,26 +48,32 @@ def profile_update(request):
 
     if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
-        individual_form = UpdateIndividualForm(request.POST, request.FILES, instance=profile)
+        individual_form = UpdateIndividualForm(
+            request.POST, request.FILES, instance=profile
+        )
 
         if form.is_valid() and individual_form.is_valid():
-             form.save()
-             individual_form.save()
-             messages.success(request, "Profile updated successfully")
-             return redirect("profile")
+            form.save()
+            individual_form.save()
+            messages.success(request, "Profile updated successfully")
+            return redirect("profile")
         else:
-            messages.error(request, "Update failed. Please ensure the form is valid.")
-    
+            messages.error(
+                request,
+                "Update failed. Please ensure the form is valid."
+            )
+
     else:
         form = UserProfileForm(instance=profile)
         individual_form = UpdateIndividualForm(instance=profile)
-    
+
     context = {
-        "individual_form" : individual_form,
+        "individual_form": individual_form,
         "orders": orders,
         "form": form,
     }
     return render(request, "profiles/profile_update.html", context)
+
 
 @login_required
 def profile_delete(request, pk):
@@ -78,6 +85,7 @@ def profile_delete(request, pk):
     user.delete()
     messages.warning(request, "Your account has been deleted")
     return redirect("home")
+
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Newsletter(models.Model):
 
     name = models.CharField(max_length=50, null=False, blank=False)
@@ -15,6 +16,7 @@ class Newsletter(models.Model):
     def __str__(self):
         return self.name
 
+
 class SubscribedUsers(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True, max_length=100)
@@ -22,4 +24,3 @@ class SubscribedUsers(models.Model):
 
     def __str__(self):
         return self.email
-        

@@ -2,12 +2,18 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
-STATUS = ((0, "Draft"), (1,"Publish"))
+
+STATUS = ((0, "Draft"), (1, "Publish"))
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete= models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='blog_posts'
+    )
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     excerpt = models.TextField(blank=True)
@@ -20,8 +26,7 @@ class Post(models.Model):
         ordering = ['-created_on']
 
     def get_absolute_url(self):
-        return reverse('home')    
+        return reverse('home')
 
     def __str__(self):
-        return self.title  
-
+        return self.title
