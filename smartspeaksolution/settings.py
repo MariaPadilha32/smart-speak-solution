@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com', '8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
 'https://smart-speak-solutions-d06084558783.herokuapp.com/', 'smart-speak-solutions-d06084558783.herokuapp.com', ]
