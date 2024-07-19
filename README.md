@@ -1,12 +1,12 @@
 # Smart Speak Solutions
 
-<img src="media/logo-readme.jpg">
+<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/logo.png">
 
 ## A e-commerce site designed to provide services from a profesional writer specialized on writing unique speeches.
 
 ### By Maria Fernanda Dias Padilha
 
-## [Live Site](https://TOBECHANGED.herokuapp.com/)  |  [Repository](https://github.com/MariaPadilha32/smartspeaksolutionsp5)
+## [Live Site](https://smart-speak-solutions-d06084558783.herokuapp.com/)  |  [Repository](https://github.com/MariaPadilha32/smart-speak-solution)
 
 
 ## Table of contents
@@ -38,9 +38,13 @@ A newsletter is available for users to subscribe to and receive updates on servi
 A Facebook, WhatsApp, and Instagram has been set up to promote the business online and allow customers to contact the company.
 
 
-[ Facebook ] (#https://www.facebook.com/profile.php?id=61560352866469)
-[ Instagram ] (#https://www.instagram.com/smartspeaksolutions.ie/)
-[ Whatsapp ] (#https://wa.me/353833679626)
+1. [ Facebook ](https://www.facebook.com/profile.php?id=61560352866469)
+<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021423.png">
+
+2. [ Instagram ](https://www.instagram.com/smartspeaksolutions.ie/)
+<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021444.png">
+
+3. [ Whatsapp ](https://wa.me/353833679626)
 
 
 ### Keywords
@@ -48,11 +52,11 @@ To enhance the site's SEO and improve visibility, relevant keywords were careful
 
 
 <summary>Keywords</summary>
-<img src="TOBEADDED">
+<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/meta.png">
 
 
 ### Sitemaps
-A sitemap.xml file was generated using XML-Sitemaps and included in the root level of the project repository to help search engines crawl the site more effectively.
+A sitemap.xml file was generated using [ XML-Sitemaps ](https://www.xml-sitemaps.com/download/smart-speak-solutions-d06084558783.herokuapp.com-da3d5398b/sitemap.xml?view=1) and included in the root level of the project repository to help search engines crawl the site more effectively.
 
 ### Robots
 A robots.txt file was created at the root level of the project file to guide search engine crawlers on which URLs to access, avoiding site overload.
@@ -65,7 +69,7 @@ A custom-designed newsletter subscription form is seamlessly integrated into the
 
 ### Color Pallette
 - The color palette used for the Smart Speak Solutions website includes the following colors:
-<img src="TOBEADDED">
+<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/palette.png">
 
 * #060644 (Dark Blue): This deep blue color conveys a sense of trust, professionalism, and reliability. It is often associated with competence and calmness, helping to establish the credibility of the service offered.
 
@@ -79,47 +83,16 @@ A custom-designed newsletter subscription form is seamlessly integrated into the
 
 ### Wireframes
 
-Wireframes were meticulously crafted to outline the website layout, mostly focusing on desktop versions.
-These wireframes serve as a visual guide, ensuring a user-friendly and intuitive design. 
-While the final website has slight variations from the initial wireframes, the core layout and design principles remain consistent.
+Initially, a wireframe was created as a visual aid to outline the desktop version of the website layout. This wireframe provided a guide for a user-friendly and intuitive design. As the project progressed, some changes were made, but the core layout and design principles from the original wireframe were maintained.
 
 - WireFrames 
-    <img src="TOBEADDED">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/wireframe.png">
 
-<details>
-	<summary> Index page </summary>
-	<br>
-    <img src="TOBEADDED">
-</details>
-
-<details>
-	<summary> Login Wireframe </summary>
-	<br>
-    <img src="TOBEADDED">
-</details>
-
-<details>
-	<summary> Register Wireframe </summary>
-	<br>
-    <img src="TOBEADDED">
-</details>
-
-<details>
-	<summary> Product Page Wireframe </summary>
-	<br>
-    <img src="TOBEADDED">
-</details>
-
-#### Database Schema
+#### Database Scheme
 
 Pre-project planning involved detailed consideration of the database structure. This planning was essential to clearly define how different database models interact with each other and to determine the necessary data fields for each model.
 
-<details>
-	<summary>Entity Relationship Diagram</summary>
-<img src="media/readme/TD-ERG.jpg">
-</details>
-
-The database consists of several key models:
+* The database consists of several key models:
 
 * UserProfile Model: This model stores user-related information such as contact details and address. Each user has a unique profile associated with them.
 
@@ -186,7 +159,7 @@ The database consists of several key models:
 | id | Field |
 |--|--|
 |order_number|CharField|
-|user|ForeignKey|
+|user_profile|ForeignKey|
 |full_name|CharField|
 |email|EmailField|
 |phone_number|CharField|
@@ -261,6 +234,8 @@ The database consists of several key models:
 |sku|CharField|
 |description|TextField|
 |price|DecimalField|
+|priceMin|DecimalField|
+|priceMax|DecimalField|
 |stock|IntegerField|
 |in_stock|BooleanField|
 |image_url|URLField|
@@ -287,21 +262,6 @@ By continuously updating the Kanban board and logging each step, I was able to i
 I used the github projects as a agile tool to manage the planning and implamentation of functions to the site. 
 [Project Board](https://github.com/users/MariaPadilha32/projects/12)
 
-#### Epics
-**************************** OLHAR NO ORIGINAL******************************************
-	1. [Epic: User Registration & Accounts](TOBEADDED)
-	2. [Epic: Shopping Bag](TOBEADDED)
-	3. [Epic: Product Admin](TOBEADDED)
-	4. [Epic: Blog](TOBEADDED)
-	5. [Epic: Newsletter](TOBEADDED)
-	6. [Epic: Profiles](TOBEADDED)
-	7. [Epic: Site Navigation](TOBEADDED)
-	8. [Epic: Contact & FAQ](TOBEADDED)
-	9. [Epic: SEO & Marketing](TOBEADDED)
-	10. [Epic: ReadMe.md](TOBEADDED)
-	11. [Epic: Deploy Project](TOBEADDED)
-
-
 [Back to Top of page](#contents)
 
 
@@ -315,149 +275,118 @@ This section highlights the main features of the Smart Speak Solutions website.
     - The navigation bar is a constant presence across the website, providing easy access to all relevant links. Admin-specific links are shown when an admin is logged in, allowing them to manage site content. The center logo directs users to the home page, while the bag icon in the top right corner shows the current cart total and links to the checkout page.
 <details>
 	<summary> Navigation </summary>
-    <img src="media/readme/features/desk-nav-feature.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021304.png">
 </details>
 <details>
 	<summary> Admin Navigation </summary>
-    <img src="media/readme/features/navbar-admin-sc-features.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+074424.png">
 </details>
     - On mobile devices, the navigation bar collapses into a more compact form for better usability.
 <details>
 	<summary> Navigation Mobile </summary>
-    <img src="media/readme/features/mobile-nav-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022230.png">
 </details>
     - The footer, present on every page, contains links to social media profiles.
 <details>
 	<summary> Footer Navigation </summary>
-    <img src="media/readme/features/footer-sc-features.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021354.png">
 </details>
 - Authentication
     - Authentication is managed by Django Allauth. Users can access login, logout, and registration pages from the account section in the navbar. Error messages are displayed for incorrect inputs.
 <details>
 <summary> Registration Page </summary>
-    <img src="media/readme/features/register-sc.jpg">
-</details>
-- Confirmation Email
-	- New users receive an email to confirm their registration details.
-<details>
-<summary> Email Confirmation </summary>
-    <img src="media/readme/features/signup-email-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+074714.png">
 </details>
 - Products
 	Products are displayed in various categories and can be sorted by price. Users can view detailed information about each product.
 <details>
-<summary> Products Overview </summary>
-    <img src="media/readme/features/products-sc-feature.jpg">
+<summary> Most Popular Products </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021340.png">
 </details>
-- Categories can be selected on the home page via cards displayed below the hero image.
 <details>
 <summary> Product Categories </summary>
-    <img src="media/readme/features/products-sc-feature.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021304.png">
 </details>
 <details>
 <summary> Products Details </summary>
-    <img src="media/readme/features/product-deta-sc-features.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021614.png">
 </details>
 <details>
 <summary> Products Details </summary>
-    <img src="media/readme/features/product-description-sc-features.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021637.png">
 </details>
 <details>
-<summary> Product Catagory Home Page </summary>
-    <img src="media/readme/features/catagory-sc-features.jpg">
+<summary> Admin Products </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022030.png">
 </details>
 - Product Admin
 	- Admins have access to additional features for product management, including editing and adding new products. 
 <details>
-<summary> Admin Products </summary>
-    <img src="media/readme/features/edit-delete-product-sc.jpg">
-</details>
-<details>
-<summary> Admin Edit Products </summary>
-    <img src="media/readme/features/edit-product-1-sc.jpg">
-	<img src="media/readme/features/edit-product-2-sc.jpg">
-	<img src="media/readme/features/product-edit-success-sc.jpg">
-</details>
-<details>
 <summary> Admin Add Products </summary>
-    <img src="media/readme/features/add-product-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022119.png">
+	<img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022126.png">
+</details>
+<details>
+<summary> Bag Details </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021648.png">
 </details>
 -Shopping Bag
 	The bag contains the list of products that the user has added to possibly purchase. The quantities of the products can be adjusted in the bag as well as product deletion. The overall price and extra charges are calculated in the bag before checkout.
 <details>
-<summary> Bag Details </summary>
-    <img src="media/readme/features/blog-details.jpg">
+<summary> Bag Remove Item </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021752.png">
 </details>
 <details>
-<summary> Bag Remove Item </summary>
-    <img src="media/readme/features/bag-remove-sc.jpg">
+<summary> Checkout Details and Payment Processing (Stripe) </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021818.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021825.png">
 </details>
 - Checkout
 	- The checkout page gathers detailed information about the user's order, including final costs and delivery address.
-<details>
-<summary> Checkout Details </summary>
-    <img src="media/readme/features/checkout-details-sc.jpg">
-</details>
-<details>
-<summary> Payment Processing (Stripe) </summary>
-    <img src="media/readme/features/stripe-sc.jpg">
-</details>
 	- A confirmation page is displayed once the payment is processed, summarizing the transaction
 <details>
 <summary> Order Confirmation </summary>
-    <img src="media/readme/features/order-confirmation-screen.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021930.png">
 </details>
 - Blog
 	- The blog section features articles written by the admin.
 <details>
 <summary> Blog Page </summary>
-    <img src="media/readme/features/blog-user-sc.jpg">
-</details>
-<details>
-<summary> Blog Detail </summary>
-    <img src="media/readme/features/blog-details.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021530.png">
 </details>
 	- Admins can manage blog posts, including editing, deleting, or adding new articles.
 <details>
 <summary> Admin Blog </summary>
-    <img src="media/readme/features/blog-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022049.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022056.png">
 </details>
 - Contact
 	- A contact page is accessable for all users, where a FAQ is also to provide users answers to any issues they had. There is a support email that is accessable to logged-in users to help with order issues.
 <details>
-<summary> Contact </summary>
-    <img src="media/readme/features/contact-sc.jpg">
+<summary> Contact and FAQ </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021406.png">
 </details>
 <details>
 <summary> Contact Form </summary>
-    <img src="media/readme/features/contact-form-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021504.png">
 </details>
 <details>
-<summary> FAQ </summary>
-    <img src="media/readme/features/faq-sc.jpg">
-</details>
 - Newsletter
 	- Users can subscribe to the newsletter to receive updates and special offers via email.
 <details>
 <summary> Newsletter Subscription </summary>
-    <img src="media/readme/features/newsletter-sc-features.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+021346.png">
 </details>
 	- Admins can manage and send newsletters to subscribers.
 <details>
 <summary> Newsletter Admin </summary>
-    <img src="media/readme/features/send-newsletter.jpg">
-</details>
-- Privacy Policy
-	- A comprehensive privacy policy is available, outlining how user data is handled.
-<details>
-<summary> Privacy Policy </summary>
-    <img src="media/readme/features/privacy-policy-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022156.png">
 </details>
 - 404 Error Page
 	- A custom 404 error page is displayed for non-existent URLs.
 <details>
 <summary> 404 Error </summary>
-    <img src="media/readme/features/404-sc.jpg">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/Captura+de+tela+2024-07-19+022601.png">
 </details>
 - Restrictions
 	- Users are redirected from pages they do not have authorization to view, either back to the home page or to the sign-in page.
@@ -465,10 +394,18 @@ This section highlights the main features of the Smart Speak Solutions website.
 <a name="left"></a>
 
 ### Future Features
-	- A review section under each product for users to leave feedback. This feature was not implemented due to time constraints.
-	- Adding FAQ sections to the contact form from the front end.
-	- Product questions: Users can submit questions about product details that are answered by site experts.
+- Review Section for Products:
+A dedicated section under each product where users can leave feedback and reviews. This feature is intended to enhance user interaction and provide valuable insights to future customers. It was not implemented due to time constraints but is planned for future development.
 
+- Product Questions:
+A feature allowing users to submit questions about product details, which can then be answered by site experts or the community. This will help in addressing specific user queries and improving the overall customer experience. This feature is also slated for future implementation due to time limitations.
+
+- Comprehensive Speech Information Form:
+A form designed to collect all necessary information for custom speeches. This form would allow users to provide detailed inputs about the speech they require, ensuring a tailored and high-quality output. Unfortunately, this feature was not completed due to lack of time but remains a priority for future updates to streamline the custom speech creation process. In the meantime, the solution is for the writer to contact the customer directly once payment is completed to gather all necessary details for the speech.
+
+<summary> Future Forms </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5/future+forms.png">
+</details>
 [Back to top](#contents)
 
 <a name="tech"></a>
@@ -476,46 +413,46 @@ This section highlights the main features of the Smart Speak Solutions website.
 ##  Technology Used
 
 ### Html
- - Used to structure the content of the website, providing the foundation for the web pages.
+ - Utilized to structure the content of the website, laying the foundation for all web pages.
 
 ### CSS
- - Custom CSS was written to style the website according to the design specifications and wireframes, ensuring a visually appealing and responsive layout.
+ - Custom CSS was crafted to style the website as per design specifications and wireframes, ensuring a visually appealing and responsive layout.
 
 ### JavaScript
- - Used to add interactivity and enhance user experience. For example, JavaScript was used to implement the timeout function for messages and to enable the menu on the index.html page.
+ - Implemented to add interactivity and enhance user experience, such as enabling the menu on the index.html page and setting timeout functions for messages.
 
 ### Python
- -  The primary programming language used for the backend logic of the project, including handling requests and processing data.
+ -  The primary programming language used to handle backend logic, including processing data and handling requests.
 
 ### Django
- -  The web framework used to build this project, providing a robust and scalable structure. Django facilitated the development of the backend, including models, views, and templates.
+ -  A front-end framework used alongside Django to facilitate design and development, ensuring the website is responsive and mobile-friendly.
 
 ### Font Awesome
- -  An icon library used in the navigation bar and footer to enhance the visual appeal and usability of the website with various icons.
+ -  An icon library integrated into the navigation bar and footer to improve the visual appeal and usability of the website with various icons.
 
 ### Bootstrap 5
  - A front-end framework used alongside Django to streamline the design and development process, ensuring a responsive and mobile-friendly layout.
 
 ### GitHub
- - Used to store the project's code and manage version control. The GitHub repository also includes the project's Kanban board, which was used to track progress and manage tasks.
+ - Used for storing the project's code and managing version control. It also hosted the project's Kanban board to track progress and manage tasks.
 
 ### Heroku
- - A cloud platform used to host and deploy the website, ensuring it is accessible to users online.
+ - A cloud platform leveraged to host and deploy the website, making it accessible online.
 
 ### ElephantSQL
  - A cloud-based PostgreSQL database service used to store and manage the project's data.
 
 ### Git
-- A cloud-based PostgreSQL database service used to store and manage the project's data.
+- A version control system utilized to track changes in the project's source code, enabling collaboration and maintaining a history of modifications.
 
 ### AWS S3 and IAM
-- Used to host static and media files for this project and IAM for the permissions based roles for accessing the S3 buckets.
+- Employed to host static and media files for the project, with IAM managing permission-based roles for accessing the S3 buckets..
 
 ### Stripe
-- A payment processing service integrated into the website to handle secure online payments.
+- A payment processing service integrated into the website to securely handle online payments.
 
 ### Django-Crispy-Forms
-- A Django application used to style forms, providing a more user-friendly and aesthetically pleasing form interface.
+- A Django application used to enhance the styling of forms, providing a more user-friendly and aesthetically pleasing form interface.
 
 [Back to Top of page](#contents)
 
@@ -530,24 +467,30 @@ Testing documentation can be found [here.](TESTING.md)
 
 <a name="bugs"></a>
 
-Known:
-	- When a product gets added to the basket, a toast is displayed but it does not disapear after the set time. It does also not close when the cornor 'x' is clicked. The user has to click on something else to remove the toast. I belive this is an issue with how my JS function is interacting with the toast html.
-	- In the shopping bag, the sub-total is still in $ instead of €. When an item is added to the baf, the icon changes but still has the $ instead of euro symbol. 
-	- The mobile site is not fully respionsive as some product images do not scale down correctly, this is an issue with the scaling and break points in the css.
-	- The search bar doesn't bring all the items forward. This is because the q value is not added correctly to new products added.
-	- Order confirmation email were not being sent after the order has been processed. This was perviously working and other emails such as password verification are sending. 
-	- blog CSS
-	- Bag bug  - getting int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
-  - Exception Location:	/workspace/smart-speak-solution/bag/views.py, line 17, in add_to_bag
+
+1. Persistent Toast Notification:
+Description: When a product is added to the basket, a toast notification appears but does not disappear after the set time. Additionally, it does not close when the corner 'x' is clicked. The user must click elsewhere to remove the toast. This issue seems to be related to the interaction between the JavaScript function and the toast HTML.
+
+2. Order Confirmation Email:
+Description: Order confirmation emails are not being sent after an order is processed. This functionality was previously working, and other emails, such as password verification, are being sent successfully.
+
+3. Menu on Small Screens:
+Description: The menu is not functioning correctly on small screens when inspected. This issue affects the usability of the site on mobile devices.
+
+4. Payment Button on Small Screens:
+Description: The payment button is not displaying properly on small screens, causing issues with the payment process on mobile devices.
+
+5. CSS Issues with New Messages:
+Description: When a new message is received, certain elements, such as buttons, move outside the visible area, affecting the layout and usability.
 
 <a name="deployment"></a>
 
 ## Deployment and Local Development
-The live deployed version of the website can be found on [Heroku](OBEADDED). The steps and technologies involved in deploying it are outlined below. The steps on how to fork or clone the repository for the website are also outlined.
+The live deployed version of the website can be found on [Heroku](https://smart-speak-solutions-d06084558783.herokuapp.com/). The following sections detail the deployment process and the technologies used. Instructions for forking or cloning the repository are also provided.
 
 ### ElephantSQL Database
 
-The PostgreSQL Database for this project was obtained using [ElephantSQL](https://www.elephantsql.com), a service which you can sign-up to with your GitHub account. Once signed up follow these steps:
+The PostgreSQL Database for this project was was set up using [ElephantSQL](https://www.elephantsql.com),  which you can sign up for using your GitHub account. After signing up, follow these steps:
 
 - Click **Create New Instance** to start a new database.
 - Name used: `smartspeaksolution`.
@@ -830,16 +773,16 @@ The steps below describe how to fork or clone the repository if desired.
 ### Media
 | Source | Location | Type |
 | --- | --- | --- |
-|[Blog Photos](TOBEADDED) | Blog Article | image |
-|[Eulogies](TOBEADDED) | Products | image |
-|[Spouse's speech](TOBEADDED) | Products | image |
-|[Parent's speech](TOBEADDED) | Products | image |
-|[Wedding party speech](TOBEADDED) | Products | image |
-|[Wedding Vows](TOBEADDED) | Products | image |
-|[Anniversaries](TOBEADDED) | Products | image |
-|[Retirements](TOBEADDED) | Products | image |
-|[Special Birthdays](TOBEADDED) | Products | image |
-|[Other occasions](TOBEADDED) | Products | image |
+|[Blog Photos](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/blog_weddingvows_mALH5iB_wckjLDx.png) | Blog Article | image |
+|[Eulogies](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/eulogy.jpg) | Eulogy | image |
+|[Spouse's speech](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/manspeech.jpg) | Weddings | image |
+|[Parent's speech](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/father.jpg) | Weddings | image |
+|[Wedding party speech](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/groomsman1.jpg) | Weddings | image |
+|[Wedding Vows](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/vows.jpg) | Weddings | image |
+|[Anniversaries](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/anniversaries.jpg) | Special Occasions | image |
+|[Retirements](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/retirements.jpg) | Special Occasions | image |
+|[Special Birthdays](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/birthday.jpg) | Special Occasions | image |
+|[Other occasions](https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/confirmation.jpg) | Special Occasions | image |
 
 
 ### Resources
@@ -848,8 +791,8 @@ The steps below describe how to fork or clone the repository if desired.
 
 ### Acknowledgements
 
-	- 
-	- 
-	- 
+- I would like to acknowledge Marko Tot and my mentor Harry.
+- The tutor assistance team was an amazing help during very challenging points of my project.
+- Most special thanks to Ger Hickey, my father-in-law, who passed away recently. He was always an amazing support.
 
 [Back to top](#contents)
