@@ -5,25 +5,13 @@
                 Home
             </a>
         </li>
-        <li class="nav-item dropdown item-dropdown">
+        <li class="nav-item dropdown ">
             <a href="{% url 'products' %}?category=eulogies" class="logo-font font-weight-bold nav-link text-white mr-5">Eulogies</a>
-            <!-- <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="all-products-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">  
-            </a>
-            <div class="dropdown-menu bg-transparent text-gold border-0" aria-labelledby="eulogies">
-                <a href="{% url 'products' %}?category=eulogies" class="dropdown-item">Eulogies</a>
-            </div> -->
         </li>
-        <li class="nav-item dropdown">
-            <li class="list-inline-item nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="weddingservices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Weddings
-                </a>
-            <div class="dropdown-menu bg-transparent text-gold border-0" aria-labelledby="weddings">
-                <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Spouse's speech</a>
-                <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Parent of the Groom/Bride Speeches</a>
-                <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Wedding Party Speeches</a>
-                <a href="{% url 'products' %}?category=wedding" class="dropdown-item">Wedding Vows</a>
-            </div>
+        <li class="nav-item dropdown ">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=wedding" id="weddingservices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Weddings
+            </a>
         </li>
 
         <li class="nav-item dropdown item-dropdown">
