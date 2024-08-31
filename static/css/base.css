@@ -222,6 +222,11 @@ footer {
     border-radius: 0.25rem;
 }
 
+.form-contact{
+    margin-top: 200px;
+}
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
