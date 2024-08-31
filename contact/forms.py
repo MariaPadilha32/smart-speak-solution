@@ -12,7 +12,6 @@ class ContactForm(ModelForm):
             'email': 'Email',
             'subject': 'Subject',
             'message': 'Message',
-            'reason': 'Reason for contact',
         }
 
          self.fields['email'].widget.attrs['autofocus'] = True
@@ -28,7 +27,6 @@ class ContactGeneralForm(ModelForm):
             'email': 'Email',
             'subject' : 'Subject',
             'message': 'Message',
-            
         }
 
          self.fields['email'].widget.attrs['autofocus'] = True
