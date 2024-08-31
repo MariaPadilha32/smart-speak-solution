@@ -11,22 +11,11 @@
         <li class="nav-item dropdown ">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=wedding" >Weddings</a>
         </li>
-
-        <li class="nav-item dropdown item-dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="specialoccasions" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Special Occasions
-                </a>
-            <div class="dropdown-menu bg-transparent text-gold border-0" aria-labelledby="special_occasions">
-                <a href="{% url 'products' %}?category=special_occasions" class="dropdown-item">Anniversaries</a>
-                <a href="{% url 'products' %}?category=special_occasions" class="dropdown-item">Retirements</a>
-                <a href="{% url 'products' %}?category=special_occasions" class="dropdown-item">Special Birthdays</a>
-                <a href="{% url 'products' %}?category=special_occasions" class="dropdown-item">Other Occasions</a>
-            </div>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=special_occasions" >Special Occasions</a>
         </li>
         <li class="nav-item dropdown item-dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'blog' %}" id="blog-link">
-                Blog
-            </a>
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'blog' %}" id="blog-link">Blog</a>
         </li>
     </ul>
 </div>
