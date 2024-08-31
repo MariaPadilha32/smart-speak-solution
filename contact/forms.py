@@ -20,13 +20,13 @@ class ContactForm(ModelForm):
 class ContactGeneralForm(ModelForm):
     class Meta:
         model = Contact
-        fields = ("email", "message")
+        fields = ("email", "subject", "message")
 
     def __init__(self, *args, **kwargs):
          super().__init__(*args, **kwargs)
          placeholders = {
             'email': 'Email',
-            
+            'subject' : 'Subject',
             'message': 'Message',
             
         }

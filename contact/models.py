@@ -14,7 +14,7 @@ class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=150)
     message = models.TextField(max_length=700)
-    reason = models.CharField(max_length=15, choices=CONTACT_CHOICES)
+    #reason = models.CharField(max_length=15, choices=CONTACT_CHOICES)
 
     def __str__(self):
         return self.email
