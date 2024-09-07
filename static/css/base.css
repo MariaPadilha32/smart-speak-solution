@@ -235,6 +235,11 @@ footer {
     margin-bottom: 100px;
 }
 
+.bag-buttons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
