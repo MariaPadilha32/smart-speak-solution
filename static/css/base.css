@@ -240,6 +240,11 @@ footer {
     margin-bottom: 50px;
 }
 
+.add-product-buttons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
