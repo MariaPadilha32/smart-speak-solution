@@ -5,7 +5,7 @@ from .forms import GalleryForm
 
 def gallery(request):
     photos = Gallery.objects.all()
-    total = photos.count
+    total = photos.count()
     list_photos = []    
     if total > 0:
         for photo in range(0, total):
