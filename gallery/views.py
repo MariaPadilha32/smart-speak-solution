@@ -11,9 +11,10 @@ def gallery(request):
     else:
         print(False)
     #total = total.count
+    total = Gallery.objects.values_list()
+
     list_photos = []    
-    total = 0
-    if total > 0:
+    if total.count > 0:
         for photo in range(0, total):
             list_photos.append(photos[photo])
     return render(request, 'gallery/gallery.html', {'photos': photos, 'total' : total, 'post_list' : list_photos})
