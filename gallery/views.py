@@ -6,8 +6,8 @@ from .forms import GalleryForm
 def gallery(request):
     photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
-    total = photos.objects.filter(id >= 1)
-    total = total.count
+    total = Gallery.objects.filter(id>=1).count()
+    #total = total.count
     list_photos = []    
     if total > 0:
         for photo in range(0, total):
