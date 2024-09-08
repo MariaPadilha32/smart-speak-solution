@@ -5,9 +5,8 @@ from .forms import GalleryForm
 
 def gallery(request):
     photos = Gallery.objects.all()
-    #total = Gallery.objects.count()
-    list_photos = []
-    total = 0
+    total = Gallery.objects.count()
+    list_photos = []    
     if total > 0:
         for photo in range(0, total):
             list_photos.append(photos[photo])
