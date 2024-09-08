@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="text-center">
+<h1>Edit Photo</h1>
+
+<br>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-secondary">Confirm Edt</button>
+    </form>
+</div>
+</section>
+{% endblock %}

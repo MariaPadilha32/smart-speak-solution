@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+<section class="text-center form-section">
+<h1>New Photo</h1>
+
+<br>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <p>
+            <input type="hidden" name="author" maxlength="100" required id="id_author" value="{{ user.username }}">
+        </p>
+        <p>
+            <label for="id_title">Title:</label>
+            <input type="text" name="title" maxlength="100" required id="id_title">
+        </p>
+        <p>
+            <label for="id_description">Description:</label>
+            <textarea name="description" cols="40" rows="10" id="id_description"></textarea>
+        </p>
+        <p>
+            <label for="id_image">Image:</label>
+            <input type="file" name="image" accept="image/*" required id="id_image">
+        </p>
+        <input type="submit" value="Upload" class="btn btn-secondary">
+    </form>
+</div>
+</section>
+
+{% endblock %}
+{% block postloadjs %}
+    
+{% endblock %}
