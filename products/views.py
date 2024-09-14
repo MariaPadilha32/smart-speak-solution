@@ -15,6 +15,7 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
+    total = products.count()
     print(products)
     query = None
     categories = None
