@@ -4,6 +4,7 @@ from .models import Gallery
 from .forms import GalleryForm
 
 def gallery(request):
+    print('HEEEEREEEEE')
     photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     if (photos is None):
