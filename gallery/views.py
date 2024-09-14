@@ -8,7 +8,7 @@ def gallery(request):
     #photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     #total = total.count
-    
+    photos = any
     list_photos = []    
     #if total > 0:
     #    for photo in range(0, total):
