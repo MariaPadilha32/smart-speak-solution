@@ -48,4 +48,4 @@ def all_photos(request):
     #     'current_categories': categories,
     # }
 
-    return render(request, 'new/gallery.html')
+    return render(request, 'gallery/gallery.html')
