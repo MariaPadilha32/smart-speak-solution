@@ -7,17 +7,12 @@ def gallery(request):
     print('HEEEEREEEEE')
     photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
-    if (photos is None):
-        print(True)
-    else:
-        print(False)
     #total = total.count
-    total = Gallery.objects.filter(id__gt=0).count()
-
+    
     list_photos = []    
-    if total > 0:
-        for photo in range(0, total):
-            list_photos.append(photos[photo])
+    #if total > 0:
+    #    for photo in range(0, total):
+    #        list_photos.append(photos[photo])
     return render(request, 'gallery/gallery.html', {'photos': photos, 'total' : total, 'post_list' : list_photos})
 
 def new_photo(request):
