@@ -1,10 +1,12 @@
 # gallery/views.py
 from django.shortcuts import render, redirect, get_object_or_404
-#from .models import Gallery
-#from .forms import GalleryForm
+from .models import PhotosGallery
+from .forms import GalleryForm
 
 def gallery(request):
     print('HEEEEREEEEE')
+    photos = PhotosGallery.objects.all()
+    
     #photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     #total = total.count
