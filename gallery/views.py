@@ -4,14 +4,10 @@ from .models import PhotosGallery
 from .forms import GalleryForm
 
 def gallery(request):
-    print('HEEEEREEEEE')
     photos = PhotosGallery.objects.all()
-    total = PhotosGallery.objects.values_list('id').count()
-    #photos = Gallery.objects.all()
-    #total = photos.count() # SELECT COUNT(*) FROM TALE
-    #total = total.count
-    photos = any
-    list_photos = []    
+    
+    list_photos = []
+    
     #if total > 0:
     #    for photo in range(0, total):
     #        list_photos.append(photos[photo])
