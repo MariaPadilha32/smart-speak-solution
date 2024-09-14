@@ -32,7 +32,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('blog/', include('blog.urls')),
-    path('gallery/', include('gallery.urls')),
+    path('gallery/', include('new.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # handler404 = 'smartspeaksolutions.views.handler404'

@@ -7,5 +7,11 @@ class PhotosGalleryNew(models.Model):
     image = models.ImageField(upload_to='photos/')
     author = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name_plural = 'Galleries'
+
     def __str__(self):
+        return self.title
+
+    def get_display_name(self):
         return self.title

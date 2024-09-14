@@ -1,6 +1,17 @@
 from django.contrib import admin
-
 from .models import PhotosGalleryNew
 
-# Register your models here.
-admin.site.register(PhotosGalleryNew)
+
+class PhotosGalleryNewAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'description',
+        'author',
+        'image',
+    )
+
+    ordering = ('title',)
+
+
+admin.site.register(PhotosGalleryNew, PhotosGalleryNewAdmin)
+
