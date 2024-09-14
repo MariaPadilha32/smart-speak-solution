@@ -13,7 +13,7 @@ def gallery(request):
     #if total > 0:
     #    for photo in range(0, total):
     #        list_photos.append(photos[photo])
-    return render(request, 'gallery/gallery.html', {'photos': photos, 'total' : total, 'post_list' : list_photos})
+    return render(request, 'gallery/gallery.html', {'photos': photos, 'post_list' : list_photos})
 
 def new_photo(request):
     if request.method == 'POST':
