@@ -1,11 +1,11 @@
 # gallery/views.py
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Gallery
-from .forms import GalleryForm
+#from .models import Gallery
+#from .forms import GalleryForm
 
 def gallery(request):
     print('HEEEEREEEEE')
-    photos = Gallery.objects.all()
+    #photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     #total = total.count
     
@@ -14,7 +14,7 @@ def gallery(request):
     #    for photo in range(0, total):
     #        list_photos.append(photos[photo])
     return render(request, 'gallery/gallery.html', {'photos': photos, 'post_list' : list_photos})
-
+'''
 def new_photo(request):
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
@@ -45,3 +45,4 @@ def delete_photo(request, pk):
         photo.delete()
         return redirect('gallery')
     return render(request, 'gallery/delete_photo.html', {'photo': photo})
+'''
