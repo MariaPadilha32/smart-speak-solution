@@ -12,7 +12,7 @@ def gallery(request):
     #    for photo in range(0, total):
     #        list_photos.append(photos[photo])
     return render(request, 'gallery/gallery.html', {'photos': photos, 'post_list' : list_photos})
-'''
+
 def new_photo(request):
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
@@ -43,4 +43,3 @@ def delete_photo(request, pk):
         photo.delete()
         return redirect('gallery')
     return render(request, 'gallery/delete_photo.html', {'photo': photo})
-'''
