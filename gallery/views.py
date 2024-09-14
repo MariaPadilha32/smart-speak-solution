@@ -6,7 +6,7 @@ from .forms import GalleryForm
 def gallery(request):
     print('HEEEEREEEEE')
     photos = PhotosGallery.objects.all()
-    
+    total = PhotosGallery.objects.count()
     #photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     #total = total.count
