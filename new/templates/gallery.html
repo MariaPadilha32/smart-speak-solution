@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<div class="container" style="margin-top: 150px">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            {% if request.user.is_authenticated %}
+            
+            <a href="{% url 'new_photo' %}" class="btn btn-primary mt-2 px-10">Add your photo</a>
+            {% endif %}
+        </div>
+    
+        <div class="row">
+            {% if total == 0 %}
+            <div class="col text-center mt-3"></div>
+                <!-- <h2 class="logo-font text-blue">There are no photos!</h2> -->
+                <hr class="w-50 mb-1">
+                {% if not user.is_authenticated %}
+                <h4 class="text-blue">Would you like to share the photos of your special event? <a href="{% url 'account_login' %}">Enter your login</a></h4>
+                {% endif %}
+            </div>
+            {% endif  %}
+            <div class="col-12 left">
+                    <div class="row">
+                    {% for post in post_list %}
+                    <div class="col-6 col-sm-4">
+                        <br>
+                        <div class="card mb-4 border" style="width: 22rem;">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    <!-- The featured image/ Placeholder post images -->
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.slug }}">
+                                    </a>
+                                    <div class="image-flash">
+                                        <p class="author text-muted">Author: {{ post.author }}</p>
+                                    </div>
+                                </div>
+                                    <h3 class="card-title">{{ post.title }}</h3>
+                                    <textarea cols="36" rows="5" disabled style="border: none; resize: none;" >{{ post.description}} </textarea>
+                                <br>
+                                
+                                {% if user.is_authenticated %}
+                                <hr>
+                                {% if user.is_superuser %}
+                                <div>
+                                    <small>
+                                        <a class="link btn btn-warning col-4" href="">Edit</a>
+            
+                                        <a class="link btn btn-danger col-4" href="">Delete</a>
+                                    </small>
+                                </div>
+                                {% else %}
+                                {% if post.author == user.username or post.author == user.first_name %}
+                                <div>
+                                    <small>
+                                        <a class="link btn btn-warning col-4" href="edit/{{post.id}}">Edit</a>
+            
+                                        <a class="link btn btn-danger col-4" href="delete/{{post.id}}">Delete</a>
+                                    </small>
+                                </div>
+                                {% endif %}
+                                {% endif %}                                
+                                {% endif %}
+                                
+                                <hr>
+                                <!-- Post created date -->
+                                <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+            </div>    
+                    {% endif %}
+                    {% endfor %}
+                   
+        </div>
+    </div>
+</div>
+
+{%endblock%}
