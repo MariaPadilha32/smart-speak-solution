@@ -11,7 +11,7 @@ def gallery(request):
     else:
         print(False)
     #total = total.count
-    total = Gallery.objects.count()
+    total = Gallery.objects.filter(id__gt=0).count()
 
     list_photos = []    
     if total > 0:
