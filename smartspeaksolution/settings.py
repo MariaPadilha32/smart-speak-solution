@@ -138,8 +138,7 @@ WSGI_APPLICATION = "smartspeaksolution.wsgi.application"
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default' : dj_database_url.config(conn_max_age=600, ssl_require=True)
-        #'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -235,3 +234,5 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
