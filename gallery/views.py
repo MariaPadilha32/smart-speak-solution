@@ -4,16 +4,6 @@ from .models import PhotosGallery
 from .forms import GalleryForm
 
 def gallery(request):
-<<<<<<< HEAD
-    photos = PhotosGallery.objects.all()
-    
-    list_photos = []
-    
-    #if total > 0:
-    #    for photo in range(0, total):
-    #        list_photos.append(photos[photo])
-    return render(request, 'gallery/gallery.html', {'photos': photos, 'post_list' : list_photos})
-=======
     photos = Gallery.objects.all()
     #total = photos.count() # SELECT COUNT(*) FROM TALE
     if (photos is None):
@@ -28,7 +18,6 @@ def gallery(request):
         for photo in range(0, total):
             list_photos.append(photos[photo])
     return render(request, 'gallery/gallery.html', {'photos': photos, 'total' : total, 'post_list' : list_photos})
->>>>>>> parent of e14a9ef (list)
 
 def new_photo(request):
     if request.method == 'POST':
