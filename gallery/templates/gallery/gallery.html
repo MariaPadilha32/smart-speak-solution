@@ -56,9 +56,9 @@
                                 {% if post.author == user.username or post.author == user.first_name %}
                                 <div>
                                     <small>
-                                        <a class="link btn btn-warning col-4" href="{% url 'edit_photo' post.id %}">Edit</a>
+                                        <a class="link btn btn-warning col-4" href="edit/{{post.id}}">Edit</a>
             
-                                        <a class="link btn btn-danger col-4" href="{% url 'delete_photo' post.id %}">Delete</a>
+                                        <a class="link btn btn-danger col-4" href="delete/{{post.id}}">Delete</a>
                                     </small>
                                 </div>
                                 {% endif %}
