@@ -245,6 +245,11 @@ footer {
     margin-bottom: 50px;
 }
 
+.popular-home{
+    margin-top: 100px;
+    margin-bottom: 50px; 
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
