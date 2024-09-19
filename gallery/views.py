@@ -28,7 +28,7 @@ def new_photo(request):
     return render(request, 'gallery/new_photo.html', {'form': form})
 
 def edit_photo(request, pk):
-    photo = get_object_or_404(Gallery, pk=pk)
+    photo = get_object_or_404(PhotosGallery, pk=pk)
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES, instance=photo)
         if form.is_valid():
@@ -39,7 +39,7 @@ def edit_photo(request, pk):
     return render(request, 'gallery/edit_photo.html', {'form': form})
 
 def delete_photo(request, pk):
-    photo = get_object_or_404(Gallery, pk=pk)
+    photo = get_object_or_404(PhotosGallery, pk=pk)
     if request.method == 'POST':
         photo.delete()
         return redirect('gallery')
