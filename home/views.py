@@ -34,17 +34,27 @@ def subscribe(request):
         email = request.POST.get('email', None)
 
         if not name or not email:
-            messages.error(request, "You must type legit name and email to subscribe to a Newsletter")
+            messages.error(
+                request,
+                "You must type legit name and email to subscribe"
+            )
             return redirect("/")
 
         if User.objects.filter(email=email).exists():
-            messages.error(request, f"Found registered user with associated {email} email. You must login to subscribe or unsubscribe.")
-            return redirect(request.META.get("HTTP_REFERER", "/")) 
+            messages.error(
+                request,
+                f"Found registered user with associated {email} email."
+                "You must login to subscribe or unsubscribe."
+            )
+            return redirect(request.META.get("HTTP_REFERER", "/"))
 
         subscribe_user = SubscribedUsers.objects.filter(email=email).first()
         if subscribe_user:
-            messages.error(request, f"{email} email address is already subscriber.")
-            return redirect(request.META.get("HTTP_REFERER", "/"))  
+            messages.error(
+                request,
+                f"{email} email address is already subscriber."
+            )
+            return redirect(request.META.get("HTTP_REFERER", "/"))
 
         try:
             validate_email(email)
@@ -57,7 +67,10 @@ def subscribe(request):
         subscribe_model_instance.email = email
         subscribe_model_instance.save()
 
-        messages.success(request, f'{email} email was successfully subscribed to our newsletter!')
+        messages.success(
+            request,
+            f'{email} email was successfully subscribed to our newsletter!'
+        )
         return redirect(request.META.get("HTTP_REFERER", "/"))
 
 
@@ -84,14 +97,20 @@ def newsletter(request):
                     subject,
                     email_message_with_unsubscribe,
                     f"SmartSpeakSolutions <{request.user.email}>",
-                    [subscriber.email]  # Send email to each subscriber individually
+                    [subscriber.email]
                 )
                 mail.content_subtype = 'html'
 
                 if mail.send():
-                    messages.success(request, f"Newsletter sent to {subscriber.email}")
+                    messages.success(
+                        request,
+                        f"Newsletter sent to {subscriber.email}"
+                    )
                 else:
-                    messages.error(request, f"Failed to send to {subscriber.email}")
+                    messages.error(
+                        request,
+                        f"Failed to send to {subscriber.email}"
+                    )
 
         else:
             for error in list(form.errors.values()):
@@ -100,8 +119,14 @@ def newsletter(request):
         return redirect('/')
 
     form = NewsletterForm()
-    form.fields['receivers'].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
-    return render(request=request, template_name='home/newsletter.html', context={'form': form})
+    form.fields['receivers'].initial = ', '.join(
+        [active.email for active in SubscribedUsers.objects.all()]
+    )
+    return render(
+        request=request,
+        template_name='home/newsletter.html',
+        context={'form': form}
+    )
 
 
 def unsubscribe(request, email):
@@ -110,7 +135,10 @@ def unsubscribe(request, email):
         subscriber.subscribed = False
         subscriber.save()
 
-        messages.success(request, f"{email} has been successfully unsubscribed.")
+        messages.success(
+            request,
+            f"{email} has been successfully unsubscribed."
+        )
     except SubscribedUsers.DoesNotExist:
         messages.error(request, f"No subscription found for {email}.")
 

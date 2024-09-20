@@ -23,8 +23,10 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class CatalogAdmin(admin.ModelAdmin):
     list_display = ('name',)
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
