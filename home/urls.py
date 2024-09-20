@@ -8,4 +8,5 @@ urlpatterns = [
     path("newsletter", views.newsletter, name="newsletter"),
     path('subscribe', views.subscribe, name='subscribe'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('unsubscribe/<str:email>/', views.unsubscribe, name='unsubscribe'),
 ]

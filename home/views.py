@@ -5,11 +5,12 @@ from django.core.mail import EmailMessage
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import SubscribedUsers
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .forms import NewsletterForm
 from .models import SubscribedUsers
+from django.core.mail import send_mail
+from django.conf import settings
+from .forms import NewsletterForm
 
 
 def index(request):
@@ -69,6 +70,7 @@ def newsletter(request):
             receivers = form.cleaned_data.get('receivers').split(',')
             email_message = form.cleaned_data.get('message')
 
+            # Loop through the subscribed users
             for subscriber in SubscribedUsers.objects.all():
                 unsubscribe_link = (
                     f"http://127.0.0.1:8000/unsubscribe/{subscriber.email}/"
@@ -77,13 +79,19 @@ def newsletter(request):
                     f"{email_message}\n\nUnsubscribe link: {unsubscribe_link}"
                 )
 
-            mail = EmailMessage(subject, email_message, f"SmartSpeakSolutions <{request.user.email}>", bcc=receivers)
-            mail.content_subtype = 'html'
+                # Create and send the email to each subscriber individually
+                mail = EmailMessage(
+                    subject,
+                    email_message_with_unsubscribe,
+                    f"SmartSpeakSolutions <{request.user.email}>",
+                    [subscriber.email]  # Send email to each subscriber individually
+                )
+                mail.content_subtype = 'html'
 
-            if mail.send():
-                messages.success(request, "Email sent succesfully")
-            else:
-                messages.error(request, "There was an error sending email")
+                if mail.send():
+                    messages.success(request, f"Newsletter sent to {subscriber.email}")
+                else:
+                    messages.error(request, f"Failed to send to {subscriber.email}")
 
         else:
             for error in list(form.errors.values()):
@@ -94,3 +102,16 @@ def newsletter(request):
     form = NewsletterForm()
     form.fields['receivers'].initial = ','.join([active.email for active in SubscribedUsers.objects.all()])
     return render(request=request, template_name='home/newsletter.html', context={'form': form})
+
+
+def unsubscribe(request, email):
+    try:
+        subscriber = SubscribedUsers.objects.get(email=email)
+        subscriber.subscribed = False
+        subscriber.save()
+
+        messages.success(request, f"{email} has been successfully unsubscribed.")
+    except SubscribedUsers.DoesNotExist:
+        messages.error(request, f"No subscription found for {email}.")
+
+    return redirect('/')

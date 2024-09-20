@@ -8,7 +8,6 @@ class Newsletter(models.Model):
     email = models.EmailField(null=False, blank=False)
     created = models.DateTimeField(auto_now_add=True)
     subscribed = models.BooleanField(default=True)
-    #other = models.CharField(max_length=50, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Newsletter subscribers'
