@@ -255,6 +255,11 @@ footer {
     margin-bottom: 50px; 
 }
 
+.messages-views{
+    margin-top: 100px;
+    margin-bottom: 100px; 
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
