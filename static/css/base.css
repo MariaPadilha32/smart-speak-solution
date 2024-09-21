@@ -255,9 +255,46 @@ footer {
     margin-bottom: 50px; 
 }
 
-.messages-views{
-    margin-top: 100px;
-    margin-bottom: 100px; 
+.messages-views {
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.messages-views .table {
+    margin-top: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.messages-views .table th, 
+.messages-views .table td {
+    vertical-align: middle;
+}
+
+.messages-views .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; 
+}
+
+.messages-views .thead-dark th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.messages-views .table-responsive {
+    overflow-x: auto;
+}
+
+.messages-views .table td {
+    word-break: break-word;
+    max-width: 250px; 
+}
+
+.messages-views .table td:last-child {
+    max-width: 400px; 
 }
 
 /* ------------------------------- bootstrap toasts */
