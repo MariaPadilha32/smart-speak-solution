@@ -250,6 +250,11 @@ footer {
     margin-bottom: 25px; 
 }
 
+.contact-questions-box{
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
