@@ -297,6 +297,11 @@ footer {
     max-width: 400px; 
 }
 
+.message-box-view{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
