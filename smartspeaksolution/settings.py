@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com', '8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
-'https://smart-speak-solutions-d06084558783.herokuapp.com/', 'smart-speak-solutions-d06084558783.herokuapp.com', 'localhost', '127.0.0.1' ]
+'https://smart-speak-solutions-d06084558783.herokuapp.com/', 'smart-speak-solutions-d06084558783.herokuapp.com', 'localhost', '127.0.0.1', 'https://mariapadilh-smartspeaks-w1e6h5fqz28.ws-eu116.gitpod.io/' ]
 
 # Application definition
 
