@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com', '8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
-'https://smart-speak-solutions-d06084558783.herokuapp.com/', 'smart-speak-solutions-d06084558783.herokuapp.com', 'localhost', '127.0.0.1', 'https://mariapadilh-smartspeaks-w1e6h5fqz28.ws-eu116.gitpod.io/' ]
+'https://smart-speak-solutions-d06084558783.herokuapp.com/', 'smart-speak-solutions-d06084558783.herokuapp.com', 'localhost', '127.0.0.1',
+ 'https://mariapadilh-smartspeaks-w1e6h5fqz28.ws-eu116.gitpod.io/', '8000-mariapadilh-smartspeaks-w1e6h5fqz28.ws-eu116.gitpod.io' ]
 
 # Application definition
 
@@ -54,7 +55,6 @@ INSTALLED_APPS = [
     'contact',
     'blog',
     'gallery',
-    'new',
 
     # Other
     'crispy_forms',
@@ -119,6 +119,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'https://8000-mariapadilha32-smart-spe-xm15ocwqjy.us1.codeanyapp.com',
     'https://8000-mariapadilh-smartspeaks-40dfhnkowno.ws.codeinstitute-ide.net',
+    'https://*.gitpod.io'
 ]
 
 SITE_ID = 1

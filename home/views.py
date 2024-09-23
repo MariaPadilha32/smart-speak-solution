@@ -80,37 +80,22 @@ def newsletter(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data.get('subject')
-            receivers = form.cleaned_data.get('receivers').split(',')
             email_message = form.cleaned_data.get('message')
 
-            # Loop through the subscribed users
+            # Loop through all subscribed users
             for subscriber in SubscribedUsers.objects.all():
-                unsubscribe_link = (
-                    f"http://127.0.0.1:8000/unsubscribe/{subscriber.email}/"
-                )
-                email_message_with_unsubscribe = (
-                    f"{email_message}\n\nUnsubscribe link: {unsubscribe_link}"
-                )
-
-                # Create and send the email to each subscriber individually
                 mail = EmailMessage(
                     subject,
-                    email_message_with_unsubscribe,
-                    f"SmartSpeakSolutions <{request.user.email}>",
+                    email_message,  # No unsubscribe link
+                    settings.DEFAULT_FROM_EMAIL,
                     [subscriber.email]
                 )
-                mail.content_subtype = 'html'
+                mail.content_subtype = 'html'  # Send as HTML
 
                 if mail.send():
-                    messages.success(
-                        request,
-                        f"Newsletter sent to {subscriber.email}"
-                    )
+                    messages.success(request, f"Newsletter sent to {subscriber.email}")
                 else:
-                    messages.error(
-                        request,
-                        f"Failed to send to {subscriber.email}"
-                    )
+                    messages.error(request, f"Failed to send to {subscriber.email}")
 
         else:
             for error in list(form.errors.values()):
@@ -119,9 +104,6 @@ def newsletter(request):
         return redirect('/')
 
     form = NewsletterForm()
-    form.fields['receivers'].initial = ', '.join(
-        [active.email for active in SubscribedUsers.objects.all()]
-    )
     return render(
         request=request,
         template_name='home/newsletter.html',
