@@ -251,12 +251,13 @@ footer {
 }
 
 .contact-questions-box{
-    margin-top: 50px;
-    margin-bottom: 50px; 
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: var(--color-bg-head);   
 }
 
 .messages-views {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px ;
     padding: 20px;
     background-color: #f8f9fa; 
@@ -303,9 +304,40 @@ footer {
 }
 
 .message-box-view{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.blog-update{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.blog-update-button{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.add-product{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.button-margin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.edit-photo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.delete-photo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 
 /* ------------------------------- bootstrap toasts */
 

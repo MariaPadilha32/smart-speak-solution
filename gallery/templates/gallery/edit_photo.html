@@ -3,17 +3,18 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<section class="text-center">
-<h1>Edit Photo</h1>
-
-<br>
-<div class="form-group">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-danger">Confirm Edit</button>
-        <a href="{% url 'gallery' %}" class="btn btn-warning ml-2">Cancel</a>
-    </form>
-</div>
+<section class="text-center form-section ">
+    <div class="text-blue">
+        <h1>Edit Photo</h1>
+        <br>
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-danger">Confirm Edit</button>
+                <a href="{% url 'gallery' %}" class="btn btn-warning ml-2">Cancel</a>
+            </form>
+        </div>
+    </div>
 </section>
 {% endblock %}

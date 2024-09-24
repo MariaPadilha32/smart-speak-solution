@@ -7,11 +7,12 @@
 <h1>Update Blog Post</h1>
 
 <br>
-<div class="form-group">
+<div class="form-group blog-update">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-secondary">Update</button>
+        <button class="btn btn-primary blog-update-button">Update</button>
+        <a href="{% url 'blog' %}" class="btn btn-warning ml-2 blog-update-button">Cancel</a>
     </form>
 </div>
 </section>
