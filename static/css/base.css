@@ -245,6 +245,16 @@ footer {
     margin-bottom: 50px;
 }
 
+.signup-buttons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.allauth-box-style{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .popular-home{
     margin-top: 25px;
     margin-bottom: 25px; 
@@ -442,7 +452,7 @@ footer {
   /* Allauth form formatting */
 
   .allauth-form-style {
-    margin-top: 250px;
+    margin-top: 100px;
     background-color: #EEE;
     border-radius: 50px;
     padding: 10px;
