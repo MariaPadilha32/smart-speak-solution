@@ -769,97 +769,138 @@ The steps below describe how to fork or clone the repository if desired.
 
 [Back to top](#contents)
 
+
+
 ## Post-Failure Updates
+<a name="post"></a>
 
 Following a comprehensive review and feedback session, several critical issues were identified across various areas of the project. Each issue was thoroughly addressed, and the following improvements were implemented to bring the project up to standard:
 
 ### 1.2 Confirmation Emails Not Sent on Successful Purchases
 
  - Reason for the fail: Confirmation e-mails are not sent on successful purchases.
+
  - Issue: Confirmation emails were not being sent after successful purchases, which hindered user experience and transaction reliability.
+
  - Solution: With the guidance from Code Institute tutors, the issue was resolved by implementing a detailed debugging process. An error.html page was added to capture error messages, which allowed for troubleshooting of the email sending process. The issue stemmed from incorrect webhook handling, which was fixed, and now, users receive confirmation emails upon completing purchases.
 
 <details>
 <summary> Confirmation Emails Test: Placing an order, confirmation, email confirmation, email detail </summary>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110154.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110209.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110238.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110249.png">
 </details>
 
 ### 1.6 Code Failing Validation Tools
 
  - Reason for the fail: Code does not pass validation tools.
+
  - Issue:  The project code did not pass validation for CSS, PEP8, and JavaScript, leading to issues in coding standards and functionality.
+
  - Solution: All code was refactored to pass CSS, PEP8, and JavaScript validation tools. HTML validation has also improved significantly, with only a few remaining issues that are currently being addressed.
 
  <details>
 <summary> Test: CSS, JS, Pep8 (Gallery) </summary>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+093445.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230146.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230421.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230505.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+094948.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223631.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223642.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223651.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223729.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223740.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223756.png">
 </details>
 
 ### 1.8 Navigation Issues
 
  - Reason for the fail: Issues in navigation are present.
+
  - Issue: The website navigation had several bugs, affecting user experience and access to site features.
+
  - Solution: The navigation was thoroughly tested and adjusted. Now, all navigation elements work as intended across different devices, providing smooth and intuitive access to the website's content.
 
 ### 1.12 Non-Functional Custom Data Models
 
  - Reason for the fail: Custom data models not functional.
+
  - Issue: Several custom data models, including the Blog model, were non-functional, and the newsletter system did not work as intended.
+
  - Solution: Several key improvements were made:
-	1. A Gallery feature was added with full CRUD (Create, Read, Update, Delete) functionality. Logged-in users can now upload, edit, and delete photos. Additionally, the Admin can manage inappropriate content.
+  * A Gallery feature was added with full CRUD (Create, Read, Update, Delete) functionality. Logged-in users can now upload, edit, and delete photos. Additionally, the Admin can manage inappropriate content.
 
 <details>
 <summary> Gallery Testing </summary>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174521.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174431.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174353.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174224.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174028.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174020.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174010.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+173942.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+173832.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174521.png">
 </details>
 
-	2. The Contact Page was simplified, allowing users to submit messages directly to the Admin, who can view and manage these messages through a dedicated "View Messages" section.
+	* The Contact Page was simplified, allowing users to submit messages directly to the Admin, who can view and manage these messages through a dedicated "View Messages" section.
 
 <details>
 <summary> Contact Testing </summary>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175728.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175735.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175845.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175853.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175921.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175928.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175936.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175944.png">
 </details>
 
-	3. The Newsletter Model was fixed, enabling users to subscribe and receive newsletters. The Admin can now draft and send newsletters to all subscribers via the /newsletter page.
+	* The Newsletter Model was fixed, enabling users to subscribe and receive newsletters. The Admin can now draft and send newsletters to all subscribers via the /newsletter page.
 
 <details>
 <summary> Newsletter Testing </summary>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175013.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175027.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175245.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175355.png">
-    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
-    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
-    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
+	<br>
     <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
 </details>
 
