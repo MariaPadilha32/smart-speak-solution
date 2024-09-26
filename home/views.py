@@ -93,9 +93,15 @@ def newsletter(request):
                 mail.content_subtype = 'html'  # Send as HTML
 
                 if mail.send():
-                    messages.success(request, f"Newsletter sent to {subscriber.email}")
+                    messages.success(
+                        request,
+                        f"Newsletter sent to {subscriber.email}"
+                    )
                 else:
-                    messages.error(request, f"Failed to send to {subscriber.email}")
+                    messages.error(
+                        request,
+                        f"Failed to send to {subscriber.email}"
+                    )
 
         else:
             for error in list(form.errors.values()):

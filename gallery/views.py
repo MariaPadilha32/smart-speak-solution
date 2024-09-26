@@ -3,16 +3,21 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import PhotosGallery
 from .forms import GalleryForm
 
+
 def gallery(request):
     photos = PhotosGallery.objects.all()
     total = photos.count()
-   
 
-    list_photos = []    
+    list_photos = []
     if total > 0:
         for photo in range(0, total):
             list_photos.append(photos[photo])
-    return render(request, 'gallery/gallery.html', {'photos': photos, 'total' : total, 'post_list' : list_photos})
+    return render(
+        request,
+        'gallery/gallery.html',
+        {'photos': photos, 'total': total, 'post_list': list_photos}
+    )
+
 
 def new_photo(request):
     if request.method == 'POST':
@@ -21,11 +26,11 @@ def new_photo(request):
             form.save()
             return redirect('gallery')
         else:
-            print(form.errors)
-            #return redirect('home')
+            return redirect('home')
     else:
         form = GalleryForm()
     return render(request, 'gallery/new_photo.html', {'form': form})
+
 
 def edit_photo(request, pk):
     photo = get_object_or_404(PhotosGallery, pk=pk)
@@ -37,6 +42,7 @@ def edit_photo(request, pk):
     else:
         form = GalleryForm(instance=photo)
     return render(request, 'gallery/edit_photo.html', {'form': form})
+
 
 def delete_photo(request, pk):
     photo = get_object_or_404(PhotosGallery, pk=pk)

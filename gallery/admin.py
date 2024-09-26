@@ -2,6 +2,7 @@
 from django.contrib import admin
 from .models import PhotosGallery
 
+
 class GalleryAdmin(admin.ModelAdmin):
     list_display = (
         'title',

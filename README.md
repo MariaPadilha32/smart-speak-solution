@@ -20,9 +20,10 @@
  7. [ Testing ](#testing)  
  8. [ Bugs ](#bugs)  
  9. [ Deployment](#deployment)
- 10. [ Credits](#credits)
- 11. [ Content](#content)  
- 12. [ Acknowledgements](#acknowledgements) 
+ 10. [Post-Failure Updates](#post)
+ 11. [ Credits](#credits)
+ 12. [ Content](#content)  
+ 13. [ Acknowledgements](#acknowledgements) 
 
 <a name="business"></a>
 
@@ -767,6 +768,118 @@ The steps below describe how to fork or clone the repository if desired.
 19. The project is now ready to work on locally and any changes made can viewed using port 8000.
 
 [Back to top](#contents)
+
+## Post-Failure Updates
+
+Following a comprehensive review and feedback session, several critical issues were identified across various areas of the project. Each issue was thoroughly addressed, and the following improvements were implemented to bring the project up to standard:
+
+### 1.2 Confirmation Emails Not Sent on Successful Purchases
+
+ - Reason for the fail: Confirmation e-mails are not sent on successful purchases.
+ - Issue: Confirmation emails were not being sent after successful purchases, which hindered user experience and transaction reliability.
+ - Solution: With the guidance from Code Institute tutors, the issue was resolved by implementing a detailed debugging process. An error.html page was added to capture error messages, which allowed for troubleshooting of the email sending process. The issue stemmed from incorrect webhook handling, which was fixed, and now, users receive confirmation emails upon completing purchases.
+
+<details>
+<summary> Confirmation Emails Test: Placing an order, confirmation, email confirmation, email detail </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110154.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110209.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110238.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+110249.png">
+</details>
+
+### 1.6 Code Failing Validation Tools
+
+ - Reason for the fail: Code does not pass validation tools.
+ - Issue:  The project code did not pass validation for CSS, PEP8, and JavaScript, leading to issues in coding standards and functionality.
+ - Solution: All code was refactored to pass CSS, PEP8, and JavaScript validation tools. HTML validation has also improved significantly, with only a few remaining issues that are currently being addressed.
+
+ <details>
+<summary> Test: CSS, JS, Pep8 (Gallery) </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+093445.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230146.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230421.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+230505.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-26+094948.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223631.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223642.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223651.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223729.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223740.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/Captura+de+tela+2024-09-20+223756.png">
+</details>
+
+### 1.8 Navigation Issues
+
+ - Reason for the fail: Issues in navigation are present.
+ - Issue: The website navigation had several bugs, affecting user experience and access to site features.
+ - Solution: The navigation was thoroughly tested and adjusted. Now, all navigation elements work as intended across different devices, providing smooth and intuitive access to the website's content.
+
+### 1.12 Non-Functional Custom Data Models
+
+ - Reason for the fail: Custom data models not functional.
+ - Issue: Several custom data models, including the Blog model, were non-functional, and the newsletter system did not work as intended.
+ - Solution: Several key improvements were made:
+	1. A Gallery feature was added with full CRUD (Create, Read, Update, Delete) functionality. Logged-in users can now upload, edit, and delete photos. Additionally, the Admin can manage inappropriate content.
+
+<details>
+<summary> Gallery Testing </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174521.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174431.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174353.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174224.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174028.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174020.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174010.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+173942.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+173832.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/gallery+test/Captura+de+tela+2024-09-25+174521.png">
+</details>
+
+	2. The Contact Page was simplified, allowing users to submit messages directly to the Admin, who can view and manage these messages through a dedicated "View Messages" section.
+
+<details>
+<summary> Contact Testing </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175728.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175735.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175845.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175853.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175921.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175928.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175936.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/contact+page/Captura+de+tela+2024-09-25+175944.png">
+</details>
+
+	3. The Newsletter Model was fixed, enabling users to subscribe and receive newsletters. The Admin can now draft and send newsletters to all subscribers via the /newsletter page.
+
+<details>
+<summary> Newsletter Testing </summary>
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175013.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175027.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175245.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175355.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
+    <img src="https://smartspeaksolution.s3.eu-west-1.amazonaws.com/media/readme/PP5+-+2/newsletter+test/Captura+de+tela+2024-09-25+175402.png">
+</details>
+
+### 1.15 Broken Links
+
+ - Reason for the fail: Broken links hamper user experience.
+ - Issue: Broken links throughout the site hampered user navigation and functionality.
+ - Solution: All links were carefully reviewed and corrected. The entire site has been tested to ensure there are no remaining broken links, improving the overall user experience.
+
+### 2.1 Poor UX Design and Front-End Experience
+
+ - Reason for the fail: Missing adequate UX design leads to a poor experience at the front-end.
+ - Issue: The user experience (UX) was suboptimal, with many UI elements overlapping or not displaying correctly.
+ - Solution: Extensive CSS improvements were made to ensure a consistent and polished UI across devices. These changes have significantly enhanced the front-end experience, providing users with a more intuitive and visually appealing interface.
+
+### 2.3 Insufficient Testing Documentation
+
+ - Reason for the fail: Insufficient testing documentation.
+ - Issue: The project's testing documentation was incomplete, and testing did not cover all critical functionality.
+ - Solution: A thorough testing process was conducted, covering all essential site features. Detailed testing documentation has been updated, and it is now expected to meet the required project standards.
 
 ## Credits
 
